@@ -1,0 +1,340 @@
+/* Importação de fontes (ex: Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-color: #A0522D; /* Um tom de marrom elegante */
+    --secondary-color: #F5DEB3; /* Um bege claro */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 60px; /* Ajuste conforme o tamanho do seu logo */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Botões */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #8B4513; /* Um tom mais escuro */
+}
+
+/* Seções */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--light-gray);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+}
+
+p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg') no-repeat center center/cover; /* Adicione uma imagem de fundo impactante aqui */
+    color: var(--white);
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1, .hero-section p {
+    color: var(--white);
+}
+
+/* Estilos de Imagem Comuns */
+img {
+    max-width: 100%; /* Garante que a imagem não exceda o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* About Section */
+.about-content, .social-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 40px; /* Espaço entre texto e imagem */
+    margin-top: 40px;
+    text-align: left; /* Alinha o texto à esquerda dentro da div */
+}
+
+.about-text, .social-text {
+    flex: 2; /* Ocupa mais espaço que a imagem */
+    min-width: 300px; /* Garante que o texto não fique muito estreito */
+}
+
+.about-image, .social-image {
+    flex: 1; /* Ocupa menos espaço */
+    min-width: 250px; /* Garante que a imagem não fique muito pequena */
+}
+
+.about-image img, .social-image img {
+    border-radius: 10px; /* Cantos arredondados para as imagens */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+/* MVV Section */
+.mvv-section {
+    background-color: var(--white);
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.mvv-item {
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.mvv-item h3 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mvv-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mvv-item ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.mvv-item ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Products Section */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.product-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    display: flex; /* Para alinhar imagem e texto verticalmente */
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+}
+
+.product-item img {
+    width: 100%; /* A imagem preenche a largura do item */
+    height: 200px; /* Altura fixa para manter o padrão, ou ajuste 'auto' */
+    object-fit: cover; /* Recorta a imagem para cobrir a área */
+    border-radius: 8px; /* Cantos arredondados */
+    margin-bottom: 20px;
+}
+
+.product-item h3 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-section .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-section textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade Aprimorada com Imagens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    .about-content, .social-content {
+        flex-direction: column; /* Empilha texto e imagem em telas menores */
+    }
+
+    .about-text, .social-text, .about-image, .social-image {
+        flex: auto; /* Ocupa largura total */
+        min-width: unset; /* Remove min-width em telas pequenas */
+    }
+}
